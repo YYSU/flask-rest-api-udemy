@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "0ceefc22-399a-4dad-850a-8630fcccedf4",
+		"name": "Flask-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/store",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/store/My Wonderful Store",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"My Wonderful Store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>/item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/store/My Wonderful Store/item",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"My Wonderful Store",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Another store\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Another item\",\n    \"price\": 12.99\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/store/My Wonderful Store/item",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"My Wonderful Store",
+						"item"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
